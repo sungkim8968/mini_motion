@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/gazebo-11",
+                "/usr/include",
+                "/opt/ros/humble/include/gazebo_ros",
+                "/usr/include/sdformat-9.7",
+                "/usr/include/ignition/math6",
+                "/usr/include/ignition/common3",
+                "/usr/include/ignition/transport8",
+                "/usr/include/ignition/msgs5",
+                "/opt/ros/humble/include",
+                "/opt/ros/humble/include/builtin_interfaces",
+                "/opt/ros/humble/include/rosidl_runtime_cpp",
+                "/opt/ros/humble/include/rosidl_runtime_c",
+                "/opt/ros/humble/include/rclcpp",
+                "/opt/ros/humble/include/rcl",
+                "/opt/ros/humble/include/rcutils",
+                "/opt/ros/humble/include/rmw",
+                "/opt/ros/humble/include/rcl_yaml_param_parser",
+                "/opt/ros/humble/include/rcpputils",
+                "/opt/ros/humble/include/rosidl_typesupport_interface",
+                "/opt/ros/humble/include/geometry_msgs",
+                "/opt/ros/humble/include/tracetools",
+                "/opt/ros/humble/include/rcl_interfaces",
+                "/opt/ros/humble/include/libstatistics_collector",
+                "/opt/ros/humble/include/statistics_msgs",
+                "/opt/ros/humble/include/nav_msgs",
+                "/opt/ros/humble/include/std_msgs",
+                "/opt/ros/humble/include/tf2_geometry_msgs",
+                "/opt/ros/humble/include/tf2",
+                "/opt/ros/humble/include/tf2_ros",
+                "/opt/ros/humble/include/tf2_msgs",
+                "/usr/include/ignition/fuel_tools4",
+                "/opt/ros/humble/include/sensor_msgs"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

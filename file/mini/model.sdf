@@ -1,0 +1,395 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='mini'>
+    <link name='base_link'>
+      <kinematic>true</kinematic>
+      <inertial>
+        <pose>-3.8e-05 0.000886 0.022609 0 -0 0</pose>
+        <mass>0.36622</mass>
+        <inertia>
+          <ixx>0.0001781</ixx>
+          <ixy>-4.9979e-08</ixy>
+          <ixz>6.5815e-07</ixz>
+          <iyy>0.00019568</iyy>
+          <iyz>1.0599e-05</iyz>
+          <izz>0.00023967</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='1-joint' type='revolute'>
+      <pose relative_to='base_link'>0 0 0.05005 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>1_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.129</lower>
+          <upper>2.129</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='1_Link'>
+      <pose relative_to='1-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001015 -0.000538 0.020318 0 -0 0</pose>
+        <mass>0.12911</mass>
+        <inertia>
+          <ixx>6.9329e-05</ixx>
+          <ixy>-1.2588e-06</ixy>
+          <ixz>-1.8363e-06</ixz>
+          <iyy>5.0259e-05</iyy>
+          <iyz>-1.575e-05</iyz>
+          <izz>5.3192e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='1_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='1_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='2-joint' type='revolute'>
+      <pose relative_to='1_Link'>0 -5e-05 0.0515 0 -0 0</pose>
+      <parent>1_Link</parent>
+      <child>2_Link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.989</lower>
+          <upper>1.989</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='2_Link'>
+      <pose relative_to='2-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-2.6e-05 -0.001519 0.029868 0 -0 0</pose>
+        <mass>0.43002</mass>
+        <inertia>
+          <ixx>0.00016508</ixx>
+          <ixy>-5.4877e-07</ixy>
+          <ixz>4.3709e-07</ixz>
+          <iyy>0.00016006</iyy>
+          <iyz>2.8204e-07</iyz>
+          <izz>0.00013143</izz>
+        </inertia>
+      </inertial>
+      <collision name='2_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/2_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='2_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/2_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='3-joint' type='revolute'>
+      <pose relative_to='2_Link'>0 0 0.07555 0 -0 0</pose>
+      <parent>2_Link</parent>
+      <child>3_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.39</lower>
+          <upper>2.39</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='3_Link'>
+      <pose relative_to='3-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.001015 0.000538 0.020318 0 -0 0</pose>
+        <mass>0.12911</mass>
+        <inertia>
+          <ixx>6.93287e-05</ixx>
+          <ixy>-1.25883e-06</ixy>
+          <ixz>1.83634e-06</ixz>
+          <iyy>5.02594e-05</iyy>
+          <iyz>1.57497e-05</iyz>
+          <izz>5.31923e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='3_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/3_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='3_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/3_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='4-joint' type='revolute'>
+      <pose relative_to='3_Link'>0 5e-05 0.0515 0 0 -3.14159</pose>
+      <parent>3_Link</parent>
+      <child>4_Link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.553</lower>
+          <upper>1.553</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='4_Link'>
+      <pose relative_to='4-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-2.6e-05 -0.001519 0.029868 0 -0 0</pose>
+        <mass>0.430025</mass>
+        <inertia>
+          <ixx>0.000165077</ixx>
+          <ixy>-5.48765e-07</ixy>
+          <ixz>4.37089e-07</ixz>
+          <iyy>0.000160058</iyy>
+          <iyz>2.82038e-07</iyz>
+          <izz>0.000131427</izz>
+        </inertia>
+      </inertial>
+      <collision name='4_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/4_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='4_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/4_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='5-joint' type='revolute'>
+      <pose relative_to='4_Link'>0 0 0.07555 0 0 -3.14159</pose>
+      <parent>4_Link</parent>
+      <child>5_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.39</lower>
+          <upper>2.39</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='5_Link'>
+      <pose relative_to='5-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001015 -0.000538 0.020318 0 -0 0</pose>
+        <mass>0.12911</mass>
+        <inertia>
+          <ixx>6.9329e-05</ixx>
+          <ixy>-1.2588e-06</ixy>
+          <ixz>-1.8363e-06</ixz>
+          <iyy>5.0259e-05</iyy>
+          <iyz>-1.575e-05</iyz>
+          <izz>5.3192e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='5_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/5_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='5_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/5_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='6-joint' type='revolute'>
+      <pose relative_to='5_Link'>0 -5e-05 0.0515 0 -0 0</pose>
+      <parent>5_Link</parent>
+      <child>6_Link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.553</lower>
+          <upper>1.553</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='6_Link'>
+      <pose relative_to='6-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-7.2e-05 -0.001812 0.029412 0 -0 0</pose>
+        <mass>0.42484</mass>
+        <inertia>
+          <ixx>0.00016202</ixx>
+          <ixy>-4.1552e-07</ixy>
+          <ixz>5.1546e-07</ixz>
+          <iyy>0.00015783</iyy>
+          <iyz>7.8453e-07</iyz>
+          <izz>0.00012676</izz>
+        </inertia>
+      </inertial>
+      <collision name='6_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/6_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='6_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/6_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='7-joint' type='revolute'>
+      <pose relative_to='6_Link'>0 0 0.07555 0 -0 0</pose>
+      <parent>6_Link</parent>
+      <child>7_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-6.283</lower>
+          <upper>6.283</upper>
+          <effort>100</effort>
+          <velocity>3.1415</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='7_Link'>
+      <pose relative_to='7-joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0 0.006088 0 -0 0</pose>
+        <mass>0.016126</mass>
+        <inertia>
+          <ixx>1.1995e-06</ixx>
+          <ixy>-2.9623e-11</ixy>
+          <ixz>5.3766e-12</ixz>
+          <iyy>1.1995e-06</iyy>
+          <iyz>-8.6948e-12</iyz>
+          <izz>2.0263e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='7_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/7_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='7_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://mini/meshes/7_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+  Gazebo ROS joint state publisher plugin demo
+
+  Try for example:
+
+  ros2 topic echo /demo/joint_states_demo
+-->
+<sdf version="1.7">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://mini</uri>
+
+      <plugin name="gazebo_ros_mini_motion"
+          filename="/home/fu/ActuatorTest/motion_tennis_ball/plugins/libmini_motion.so">
+        <ros>
+          <namespace>/demo</namespace>
+          <remapping>joint_states:=joint_states_demo</remapping>
+        </ros>
+        <update_rate>400</update_rate>
+        <joint_name>1-joint</joint_name>
+        <joint_name>2-joint</joint_name>
+        <joint_name>3-joint</joint_name>
+        <joint_name>4-joint</joint_name>
+        <joint_name>5-joint</joint_name>
+        <joint_name>6-joint</joint_name>
+        <joint_name>7-joint</joint_name>
+      </plugin>
+
+    </include>
+  </world>
+</sdf>
